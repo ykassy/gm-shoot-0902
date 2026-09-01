@@ -48,7 +48,7 @@ b,strong{color:var(--ink);font-weight:600} p{margin:0}
 @media(max-width:720px){.hero{grid-template-columns:1fr}.hero .framed{order:-1;max-width:22rem;margin:0 auto}}
 .backglow{position:absolute;right:-6%;top:8%;width:60%;height:84%;border-radius:999px;pointer-events:none;z-index:0;
   background:radial-gradient(55% 50% at 55% 55%, rgba(255,176,64,.20), rgba(255,140,40,.09) 45%, transparent 72%);filter:blur(50px)}
-.copy{position:relative;z-index:1}
+.copy{position:relative;z-index:1} .nw{white-space:nowrap}
 .eyebrow{font:600 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
 h1{margin:.9rem 0 0;font-family:'GenIF',-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;font-weight:800;font-size:clamp(3rem,8.5vw,5.6rem);letter-spacing:-.06em;line-height:.96;color:var(--ink)}
 .claim{margin-top:1.4rem;font-size:clamp(1.05rem,2.2vw,1.32rem);font-weight:600;letter-spacing:-.01em;color:var(--ink)}
@@ -113,7 +113,7 @@ h2{margin:.5rem 0 0;font-size:clamp(1.5rem,3.6vw,2.2rem);font-weight:700;letter-
 .origin{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.4rem;margin-top:2.2rem;padding:1.1rem 0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
 .origin .k{font:600 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
 .origin p{font-size:14.5px;color:var(--ink-2);flex:1 1 20rem} .origin p b{color:var(--ink)}
-.origin a.chip{text-decoration:none} .origin a.chip:hover{border-color:var(--edge)} .origin a.chip:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.origin .embed{flex-basis:100%;max-width:24rem;margin-top:.4rem} .origin a.chip{text-decoration:none} .origin a.chip:hover{border-color:var(--edge)} .origin a.chip:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
 .split-bar{margin-top:clamp(5rem,10vw,8rem);padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
 footer{margin-top:6rem;padding-top:1.2rem;border-top:1px solid var(--hairline);font:500 10.5px/1.7 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-4)}
 
@@ -139,7 +139,7 @@ footer{margin-top:6rem;padding-top:1.2rem;border-top:1px solid var(--hairline);f
   <div class="backglow"></div>
   <div class="copy">
     <span class="eyebrow">Shoot plan ／ 2026.09.02 16:00 ／ 高島平インドアテニススクール</span>
-    <h1>テニス版<br>ストラックアウト</h1>
+    <h1><span class="nw">テニス版</span><br><span class="nw">ストラック</span><span class="nw">アウト</span></h1>
     <p class="claim">3つの視点が、同時に、1本に。</p>
     <p class="en">Three points of view. One file. Straight out of the app.</p>
     <p class="lede">全員の顔を描いた紙コップを積んで、テニスで落とす。<br>その全部を <b>iPhone 1台とグラス1本</b> で録る。</p>
@@ -152,7 +152,9 @@ footer{margin-top:6rem;padding-top:1.2rem;border-top:1px solid var(--hairline);f
   <span class="k">起点 ／ Benchmark</span>
   <p><b>さゆぴんのストラックアウト（4,000万回再生）</b>。このマルチカメラ視点を目指すのがベース。</p>
   <a class="chip" href="https://www.instagram.com/reel/C3Z6Z9zrEoR/" target="_blank" rel="noopener"><span>Instagram Reel ↗</span></a>
+  <div class="embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C3Z6Z9zrEoR/" data-instgrm-version="14" style="background:#000;border:0;margin:0;padding:0;width:100%;max-width:100%"></blockquote></div>
 </div>
+<script async src="https://www.instagram.com/embed.js"></script>
 
 <section>
   <span class="eyebrow">なぜ面白いか</span><h2>普通のグラス動画と、ここが違う</h2>
@@ -233,65 +235,8 @@ footer{margin-top:6rem;padding-top:1.2rem;border-top:1px solid var(--hairline);f
   <p class="safety"><i></i>げんごくんのサーブは、返せる速度と場所で。顔には向けない。</p>
 </section>
 
-<div class="split-bar"><h2 style="margin:0">ここから自分用</h2><span class="eyebrow">段取り</span></div>
 
-<section style="margin-top:2.2rem">
-  <span class="eyebrow">本番前に</span><h2>先に潰しておく</h2>
-  <hr class="divider">
-  <ul class="checks" id="pre">
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">Meta AIアプリ → グラスのファームの順で更新<span>OTA後は Developer Mode を再有効化。逆順だと降りてこない。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">一人称のストール修正を長回しで確認<span>5分回して「Stream stalled」が出なければOK。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">Vanguard が繋がるか<span>ダメなら Ray-Ban Meta。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">0.5x で画角を見比べる<span>広い方を使う。録画中は切り替えない。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">コップを積んで、当ててみる<span>崩れ方・風・飛び方をここで決める。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">三脚の位置を決める<span>低く・後ろ斜め・広角。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">Label をオフ</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">ダブルタップを指で練習</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">ストーリーズ共有を試す</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">前日：構成を凍結<span>SDK は 0.8.0 のまま。iOS 27β は入れない。</span></span></label></li>
-  </ul>
-</section>
-
-<section>
-  <span class="eyebrow">9月2日</span><h2>当日</h2>
-  <hr class="divider">
-  <ul class="checks" id="day">
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">朝：Developer Mode が生きているか</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">紙コップ・太いマジック・水・予備</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">グラス2本・充電ケース・モバイルバッテリー・空き容量</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">ボール無しで接続テストを先に<span>照明のちらつきと Wi-Fi もここで確認。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">Label オフを確認してから本番</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">1球＝1録画</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">外したテイクを多めに<span>外した瞬間の反応が主役。</span></span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">げんごくんの一人称を5本</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">コップの横に定点のスマホを置いて回す</span></label></li>
-    <li><label class="chk"><input type="checkbox"><span class="chk-b">保険カット<span>表情の寄り／積む手元／引き／ハイタッチ／装着の手元／三脚とアプリ画面。</span></span></label></li>
-  </ul>
-</section>
-
-<section>
-  <span class="eyebrow">書き出し</span><h2>4本</h2>
-  <hr class="divider">
-  <div class="two kv" style="display:grid">
-    <div><span class="k">A ／ Reels</span><p>トレンド音源つき。2人の Collab 投稿。</p></div>
-    <div><span class="k">B ／ クリーン音</span><p>効果音のみ。人に見せて回る用。</p></div>
-    <div><span class="k">C ／ 英語テロップ</span><p>日本語が読めない人向け。</p></div>
-    <div><span class="k">D ／ 無編集の生ファイル</span><p>アプリの出力そのまま。定点は入れない。</p></div>
-  </div>
-</section>
-
-<section>
-  <span class="eyebrow">忘れると詰む</span><h2>地雷</h2>
-  <hr class="divider">
-  <div class="mines">
-    <div class="mine"><span class="x">01</span><p><b>グラスを外すとセッションが落ちる。</b>テイクの合間も外さない。</p></div>
-    <div class="mine"><span class="x">02</span><p><b>ファームの OTA で Developer Mode が吹き飛ぶ。</b>前日までに更新して凍結。</p></div>
-    <div class="mine"><span class="x">03</span><p><b>一人称は 720p・手ブレ補正なし。</b>キメ画は iPhone 側で担保。</p></div>
-    <div class="mine"><span class="x">04</span><p><b>室内照明で一人称がちらつくことがある。</b>接続テストで確認。Wi-Fi の混雑もここで見る。</p></div>
-  </div>
-</section>
-
-<footer>HACK IT INC. ／ Glass MultiCam ・ 2026.09.02 ・ 画像は構図確認用のイメージで、実在の人物ではありません</footer>
+<footer>HACK IT INC. ／ Glass MultiCam ・ 2026.09.02 ・ 画像は構図確認用のイメージで、実在の人物ではありません ・ <a href="staff/" style="color:inherit">staff</a></footer>
 </div>
 <script>
 (function(){var b=document.querySelectorAll('.chk input');b.forEach(function(x,i){
